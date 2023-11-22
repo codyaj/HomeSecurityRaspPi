@@ -31,11 +31,15 @@ If you wanted to add facial recognition I would suggest [OpenCV](https://opencv.
 
 ## Roadmap
 
- - [ ] Have Raspberry Pi locally capturing and storing video and audio
- - [ ] Setup a local server and use SFTP to move data between devices
- - [ ] Setup a live feed over the local network
- - [ ] Use motion detection on the Raspberry Pi. Send alerts to the live feed and create a log
+ - [ ] Security Camera
+   - [ ] Have Raspberry Pi locally capturing and storing video and audio
+   - [ ] Setup a local server and use SFTP to move data between devices
+   - [ ] Setup a live feed over the local network
+   - [ ] Use motion detection on the Raspberry Pi. Send alerts to the live feed and create a log
+ - [ ] Smart Door Bell
+ - [ ] Door Sensors
 
+ 
 ## License
 
 Distributed under the MIT License. See 'LICENSE' for more information.
