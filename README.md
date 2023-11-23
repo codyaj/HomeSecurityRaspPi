@@ -2,7 +2,9 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 ## About The Project
 <!-- Add Image of project -->
-As you may have guessed this repo is for the home security systems created using the Raspberry Pi Zero 2 W. The goal for this project is a **full** home automated security system designed by myself which means this project will likely not be completed for a very, _very_ long time.
+As you may have guessed this repo is for the home security systems created using the Raspberry Pi Zero 2 W. The final goal for this project is to have a **full** home automated security system designed by myself. The extent I will go to for this home security system will include at the minimum secuity camera(s), indoor motion detectors, magnetic door sensors, and finally to connect everything together, a central station that will be used to disarm the alarm if triggered and call the police in an emergency situation. 
+
+As you may have suspected this is a big project for a full time student and part-time employee and you would be correct. With the constraints of time and budget I expect to have this project completed mid 2024.
 
 ## Getting Started
 
@@ -12,11 +14,11 @@ I'll outline some basic steps to help you replicate this project yourself.
 
 * [Raspberry Pi Zero 2 W](https://core-electronics.com.au/raspberry-pi-zero-2-w-wireless.html)
 * Internal laptop webcam
-* _Local Server_
 
 ### Tools
 
 * Soldering Iron
+* 
 
 ### Installation
 
@@ -36,13 +38,19 @@ If you wanted to add facial recognition I would suggest [OpenCV](https://opencv.
    - [ ] Setup a local server and use SFTP to move data between devices
    - [ ] Setup a live feed over the local network
    - [ ] Use motion detection on the Raspberry Pi. Send alerts to the live feed and create a log
+   - [ ] Create enclosure and setup wired camera and audio capture device
  - [ ] Smart Door Bell
- - [ ] Door Sensors
+   - [ ] Create enclosure with a camera
+   - [ ] Use code from the Security Camera with a new raspberry pi inside the camera
+ - [ ] Central Security Station
+   - [ ] Connect Motion detectors and Magnetic door sensors to one rasp pi
+   - [ ] Setup a keypad that will turn off the alarm when triggered
+   - [ ] Enable remote enabling of motion detecter online
 
  
 ## License
 
-Distributed under the MIT License. See 'LICENSE' for more information.
+Distributed under the MIT License. See '[LICENSE](https://github.com/codyaj/HomeSecurityRaspPi/blob/main/LICENSE)' for more information.
 
 ## Contact
 
