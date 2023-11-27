@@ -24,11 +24,6 @@ opencv
 pip install opencv-python
 ```
 
-zipfile
-```sh
-pip install zipfile
-```
-
 Install SSH for [Windows](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui) or run the below in terminal on debian operating systems
 ```sh
 sudo apt install openssh-server
@@ -41,12 +36,6 @@ Install the Raspberry Pi Imager [here](https://www.raspberrypi.com/software/).
 opencv
 ```sh
 pip install opencv-python
-```
-
-
-zipfile
-```sh
-pip install zipfile
 ```
 
 ### Hardware
