@@ -4,7 +4,8 @@ import json
 import os
 
 def saveFiles():
-    start_time = datetime.datetime.now() 
+    startTime = datetime.datetime.now()
+
     try: # disposal.py changes the directory into video this checks it and corrects if it occurs
         jsonFile = open("sshCredentials.json")
     except:
@@ -25,6 +26,7 @@ def saveFiles():
                 return "No files to be saved"
             for file in fileList:
                 sftp.get(file)
+                sftp.remove(file)
                 os.replace(file, f"video/{file}")
     
             # Create local(server) log file
@@ -37,9 +39,9 @@ def saveFiles():
             sftp.cwd("../serverLogs")
             sftp.put(f"serverLogs/{fileName}.txt")
 
-            end_time = datetime.datetime.now() 
-            time_difference = (end_time - start_time).total_seconds()
+            endTime = datetime.datetime.now() 
+            timeDifference = (endTime - startTime).total_seconds()
 
-            return f"Successful {time_difference}s"
+            return f"Successful {timeDifference}s taken for {len(fileList)} files"
     except Exception as e:
         return e
