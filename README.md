@@ -8,7 +8,7 @@ The HomeSecurityRaspPi project is a completely automated home security system th
 
 #### Security Camera
 
-The camera on the Raspberry Pi will record video and save the file every hour to the raspberry pi. While this is being done a live feed will be hosted locally so you can look. Whenever you desktop is booted and enough time has passed since the last file transfer the videos will be transfered from the Raspberry Pi to the Desktop using [Secure File Transfer Protocol (SFTP)](https://www.techtarget.com/searchcontentmanagement/definition/Secure-File-Transfer-Protocol-SSH-File-Transfer-Protocol).
+The camera on the Raspberry Pi will record video and save the file every hour to the raspberry pi. Whenever your desktop is booted or enough time has passed since the last file transfer the videos will be transfered each Raspberry Pi Camera to the Desktop using [Secure File Transfer Protocol (SFTP)](https://www.techtarget.com/searchcontentmanagement/definition/Secure-File-Transfer-Protocol-SSH-File-Transfer-Protocol).
 
 #### Smart Door Bell
 
@@ -31,11 +31,6 @@ pysftp
 pip install pysftp
 ```
 
-opencv
-```sh
-pip install opencv-python
-```
-
 Install SSH for [Windows](https://learn.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse?tabs=gui) or run the below in terminal on debian operating systems
 ```sh
 sudo apt install openssh-server
@@ -44,11 +39,6 @@ sudo apt install openssh-server
 #### Raspberry Pi Zero 2 W
 
 Install the Raspberry Pi Imager [here](https://www.raspberrypi.com/software/).
-
-opencv
-```sh
-pip install opencv-python
-```
 
 ### Hardware
 
@@ -88,14 +78,14 @@ Configure all settings inside the General tab. Once done with the General tab go
 ## Roadmap
 
  - [ ] Security Camera
-   - [ ] Have Raspberry Pi locally capturing and storing video and audio
+   - [X] Have Raspberry Pi locally capturing and storing video and audio
    - [X] Setup a local server and use SFTP to move data between devices
-   - [ ] Setup a live feed over the local network
-   - [ ] Use motion detection on the Raspberry Pi. Send alerts to the live feed and create a log
+   - [X] Use motion detection on the Raspberry Pi. Send alerts to the Central Unit and create a log
    - [ ] Create enclosure and setup wired camera and audio capture device
  - [ ] Smart Door Bell
+   - [ ] Setup a live feed over the local network working with video and audio
+   - [ ] Send alerts to Central Unit when doorbell is rung
    - [ ] Create enclosure with a camera
-   - [ ] Use code from the Security Camera with a new raspberry pi inside the camera
  - [ ] Central Security Station
    - [ ] Connect Motion detectors and Magnetic door sensors to one rasp pi
    - [ ] Setup a keypad that will turn off the alarm when triggered
