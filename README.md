@@ -73,15 +73,64 @@ SELECT EDIT SETTINGS
 
 Configure all settings inside the General tab. Once done with the General tab go to the Services tab and click Enable SSH then Use password authentication. Once both of these tabs are completed click Save then **Yes**.
 
-> To be completed
+Next ssh into your rasp pi while it is turned on with these commands
+
+```sh
+ssh username@hostname
+password
+```
+
+Enable your camera with these steps
+1. type "sudo raspi-config"
+2. Select Interfacing Options
+3. Click on "Enabled" for the camera then hit OK
+
+If you have a no IR cam navigate into your /boot/ folder and edit the config.txt folder adding the line. Otherwise skip this step
+
+```sh
+awb_auto_is_greyworld=1
+```
+
+At this stage you will want to download the code from the [cameraPi file](https://github.com/codyaj/HomeSecurityRaspPi/tree/main/cameraPi) and transfer it to the raspberry pi via [sftp](https://www.digitalocean.com/community/tutorials/how-to-use-sftp-to-securely-transfer-files-with-a-remote-server)
+
+To make the now downloaded file run at startup follow these instructions
+
+```sh
+sudo nano /etc/rc.local
+```
+
+and below the comment and above the line `exit 0` add changing "NameForYourRaspPi" to the username of your pi
+
+```sh
+python3 /home/NameForYourRaspPi/main.py
+```
+
+Now to make sure the file rc.local is executable after exiting nano type
+
+```sh
+sudo chmod +x /etc/rc.local
+```
+
+#### Home-PC/Server Setup
+
+First download all files from the [server folder](https://github.com/codyaj/HomeSecurityRaspPi/tree/main/server). Please note you may have to edit the main.py script if you are running this on a server with high uptime.
+
+Windows:
+
+1. Right click main.py and click "Create Shortcut"
+2. Press Windows Key + R
+3. Type "shell:startup"
+4. Drag said shortcut into the folder that opened
+
+Other operating systems will be added to this list later.
 
 ## Roadmap
 
- - [ ] Security Camera
+ - [X] Security Camera
    - [X] Have Raspberry Pi locally capturing and storing video and audio
    - [X] Setup a local server and use SFTP to move data between devices
    - [X] Use motion detection on the Raspberry Pi. Send alerts to the Central Unit and create a log
-   - [ ] Create enclosure and setup wired camera and audio capture device
+   - [X] Create enclosure and setup wired camera and audio capture device
  - [ ] Smart Door Bell
    - [ ] Setup a live feed over the local network working with video and audio
    - [ ] Send alerts to Central Unit when doorbell is rung
