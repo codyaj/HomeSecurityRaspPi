@@ -10,10 +10,6 @@ The HomeSecurityRaspPi project is a completely automated home security system th
 
 The camera on the Raspberry Pi will record video and save the file every hour to the raspberry pi. Whenever your desktop is booted or enough time has passed since the last file transfer the videos will be transfered each Raspberry Pi Camera to the Desktop using [Secure File Transfer Protocol (SFTP)](https://www.techtarget.com/searchcontentmanagement/definition/Secure-File-Transfer-Protocol-SSH-File-Transfer-Protocol).
 
-#### Smart Door Bell
-
-> To Be Completed
-
 #### Central Security Station
 
 > To Be Completed
@@ -42,15 +38,21 @@ Install the Raspberry Pi Imager [here](https://www.raspberrypi.com/software/).
 
 ### Hardware
 
-* [Raspberry Pi Zero 2 W](https://core-electronics.com.au/raspberry-pi-zero-2-w-wireless.html)
-* Server (*Does not need to run 24/7*)
-  * Home PC or
-  * Dedicated server
-* Cameras
-  * Infared (nightvision) or
-  * Regular
-* Camera/pi mount
-  * Try to have a hidden and high camera that is hard to reach/find 
+* Server
+  * Desktop Pc 
+* Camera
+  * [Raspberry Pi Zero 2 W](https://core-electronics.com.au/raspberry-pi-zero-2-w-wireless.html)
+  * Infared Camera with infared LED modules
+  * Case
+  * [Motion Detector](https://www.jaycar.com.au/duinotech-arduino-compatible-pir-motion-detector-module/p/XC4444)
+  * Active Buzzer
+  * Prefered method of powering
+  * **(OPTIONAL) Magnetic Door Sensor**
+* Central
+  * [Raspberry Pi Zero 2 W](https://core-electronics.com.au/raspberry-pi-zero-2-w-wireless.html)
+  * [ESP8266](https://www.makerstore.com.au/product/elec-nodemcu-esp8266/)
+  * Monitor
+  * Active Buzzer
 
 ### Tools
 
