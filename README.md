@@ -47,7 +47,7 @@ Install the Raspberry Pi Imager [here](https://www.raspberrypi.com/software/).
   * [Motion Detector](https://www.jaycar.com.au/duinotech-arduino-compatible-pir-motion-detector-module/p/XC4444)
   * Active Buzzer
   * Prefered method of powering
-  * **(OPTIONAL) Magnetic Door Sensor**
+  * (OPTIONAL) Magnetic Door Sensor
 * CentralPi
   * [Raspberry Pi Zero 2 W](https://core-electronics.com.au/raspberry-pi-zero-2-w-wireless.html)
 * KeypadPi
