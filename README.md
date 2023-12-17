@@ -40,7 +40,7 @@ Install the Raspberry Pi Imager [here](https://www.raspberrypi.com/software/).
 
 * Server
   * Desktop Pc 
-* Camera
+* CameraPi
   * [Raspberry Pi Zero 2 W](https://core-electronics.com.au/raspberry-pi-zero-2-w-wireless.html)
   * Infared Camera with infared LED modules
   * Case
@@ -48,16 +48,21 @@ Install the Raspberry Pi Imager [here](https://www.raspberrypi.com/software/).
   * Active Buzzer
   * Prefered method of powering
   * **(OPTIONAL) Magnetic Door Sensor**
-* Central
+* CentralPi
   * [Raspberry Pi Zero 2 W](https://core-electronics.com.au/raspberry-pi-zero-2-w-wireless.html)
-  * [ESP8266](https://www.makerstore.com.au/product/elec-nodemcu-esp8266/)
-  * Monitor
+* KeypadPi
+  * [Raspberry Pi Zero 2 W](https://core-electronics.com.au/raspberry-pi-zero-2-w-wireless.html)
   * Active Buzzer
+  * Keypad
+  * Monitor
+  * DHT11
 
 ### Tools
 
-* Soldering Iron
-* 
+The tools i'll recommend here dont *need* to be used but will serve an important purpose
+
+* Soldering Iron - Connecting the pins to the raspberry pi zero 2 w
+* Drill - Modifying the enclosure
 
 ### Installation
 
