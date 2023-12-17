@@ -30,6 +30,8 @@ while (True):
             diffSinceMotion = 0
             camera.stop_recording()
             camera.close()
+            f = open("video/finshedRecording", "w") # Create file to show recording is finished
+            f.close()
 
     elif (pir.motion_detected == True and recording == False): # Begin Recording
         # Init Cam
