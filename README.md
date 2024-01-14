@@ -8,11 +8,16 @@ The HomeSecurityRaspPi project is a completely automated home security system th
 
 #### Security Camera
 
-The camera on the Raspberry Pi will record video and save the file every hour to the raspberry pi. Whenever your desktop is booted or enough time has passed since the last file transfer the videos will be transfered each Raspberry Pi Camera to the Desktop using [Secure File Transfer Protocol (SFTP)](https://www.techtarget.com/searchcontentmanagement/definition/Secure-File-Transfer-Protocol-SSH-File-Transfer-Protocol).
+The camera connected to the Raspberry Pi will wait for motion to be detected and when said motion is detected a recording will begin. These recordings when completed will be sent to the CSS *(Central Security Station)* 
+ and be deleted from the camera incase the camear is stolen or turned off the video can still be accessed. The files are transferred to the CSS using [Secure File Transfer Protocol (SFTP)](https://www.techtarget.com/searchcontentmanagement/definition/Secure-File-Transfer-Protocol-SSH-File-Transfer-Protocol).
 
 #### Central Security Station
 
-> To Be Completed
+The CSS *(Central Security Station)* is actively connected to every camera and keypad and is responsible for downloading video recordings and communicating motion detection to the keypad. When the home computer is booted and the file is run all of the video recordings are downloaded using [SFTP](https://www.techtarget.com/searchcontentmanagement/definition/Secure-File-Transfer-Protocol-SSH-File-Transfer-Protocol) and then deleted from the CSS. Another important function of the CSS is to send phone alerts when the alarm goes over the acceptable time threshold.
+
+#### Keypad
+
+The keypad is setup to sound a small alarm when motion is detected and if a code is not input within an acceptable time a louder alarm will be sounded and the CSS *(Central Security Station)* will send a phone alert. The keypad also grants the ability to enable and disable the alarm.
 
 ## Getting Started
 
