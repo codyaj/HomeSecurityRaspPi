@@ -34,9 +34,14 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind(('0.0.0.0', 1234))
 s.listen(5)
 
+# Pins
 gLed = Pin(3, Pin.OUT)
 rLed = Pin(1, Pin.OUT)
 noise = Pin(16, Pin.OUT)
+led0 = Pin(14, Pin.OUT) #g
+led1 = Pin(13, Pin.OUT) #b
+led2 = Pin(15, Pin.OUT) #r
+securityLeds = [led0, led1, led2]
 for x in range(0, 4):
     rowPins.append(Pin(keypadRows[x], Pin.OUT))
     rowPins[x].value(1)
@@ -45,7 +50,7 @@ for x in range(0, 4):
 
 # Scan keys
 def scanKeys():
-    global enteredCode, alarmActive, passwordSet, securityType, alarmPing
+    global enteredCode, alarmActive, passwordSet, securityType, alarmPing, securityLeds
     while True:
 
         if (alarmActive == True): # Sounding the alarm
@@ -75,6 +80,11 @@ def scanKeys():
                     
                     if (passwordSet == True):
                         if (output == 'A'):
+                            securityType = "0"
+                            rLed.off()
+                            gLed.off()
+                            passwordSet = False
+                        if (output == 'B'):
                             securityType = "1"
                             rLed.off()
                             gLed.off()
@@ -83,7 +93,7 @@ def scanKeys():
                             utime.sleep(0.1)
                             noise.off()
                             passwordSet = False
-                        elif (output == 'B'):
+                        elif (output == 'C'):
                             securityType = "2"
                             rLed.off()
                             gLed.off()
@@ -96,6 +106,7 @@ def scanKeys():
                             utime.sleep(0.1)
                             noise.off()
                             passwordSet = False
+                            utime.sleep(120)
                     else:
                         if (output == '*'): # Clear enteredCode
                             enteredCode = ''
@@ -127,6 +138,10 @@ def scanKeys():
                                 rLed.on()
                                 utime.sleep(ledDelay)
                                 rLed.off()
+                        elif (output == 'D'):
+                            securityLeds[int(securityType)].on()
+                            utime.sleep(1)
+                            securityLeds[int(securityType)].off()
                         else:
                             enteredCode += str(output)
                             gLed.on()
